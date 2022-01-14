@@ -48,7 +48,13 @@ cd ..
 tar -xvf ILSVRC2012_img_test_v10102019.tar
 ```
 
-## 5. Convert imagenet to .npy format(Optional)
+## Convert imagenet to .npy format(Optional)
 ```shell scripy
 python imagenet2npy.py --src /your/path/to/imagenet --dst /your/path/to/imageet_npy --workers 4 --resume
+```
+
+## Convert imagenet to lmdb format(Optional)
+```shell script
+python imagenet2lmdb.py -f /your/path/to/imagenet -s train -p 8
+python imagenet2lmdb.py -f /your/path/to/imagenet -s val -p 8
 ```
